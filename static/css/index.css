@@ -1,5 +1,57 @@
+html,
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+}
+
+body .title,
+body .content,
+body .button,
+body .footer {
+  font-family: inherit;
+}
+
+/* Main column width with comfortable side gutters */
+.container.is-max-desktop {
+  max-width: min(1280px, calc(100vw - 6rem));
+  padding-left: max(2rem, env(safe-area-inset-left, 0px));
+  padding-right: max(2rem, env(safe-area-inset-right, 0px));
+}
+
+@media screen and (min-width: 1024px) {
+  .container.is-max-desktop {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+.section {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+@media screen and (min-width: 769px) {
+  .section {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+}
+
+
+.hero .hero-body {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .hero-body {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+.hero + .section {
+  padding-top: 1.5rem;
 }
 
 
@@ -49,6 +101,10 @@ body {
 
 .publication-title {
     font-family: 'Google Sans', sans-serif;
+}
+
+.publication-title a {
+    color: #3273dc;
 }
 
 .publication-authors {

@@ -67,6 +67,115 @@
       font-size: 1.2rem;
       color: #666;
     }
+
+    .schedule-panels {
+      margin-top: 1.25rem;
+    }
+
+    .schedule-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .schedule-panel {
+      background: linear-gradient(165deg, #f8fbff 0%, #f4f6f9 100%);
+      border: 1px solid rgba(3, 165, 252, 0.12);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .schedule-session-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.65rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(3, 165, 252, 0.35);
+    }
+
+    .schedule-session-title span {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #03a5fc;
+      margin-bottom: 0.2rem;
+    }
+
+    /* Override Bulma .content table styles so all session slots match */
+    .schedule-panel .schedule-slot-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.1rem;
+    }
+
+    .schedule-panel .schedule-slot-table td {
+      display: grid;
+      grid-template-columns: 8.75rem 1fr;
+      column-gap: 1rem;
+      align-items: baseline;
+      border: none !important;
+      padding: 0.55rem 0 !important;
+      vertical-align: top;
+      font-family: inherit;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .schedule-panel .schedule-slot-table tbody tr {
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .schedule-panel .schedule-slot-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-panel .schedule-slot-table tbody tr:first-child td {
+      padding-top: 0.15rem !important;
+    }
+
+    .schedule-panel .schedule-time,
+    .schedule-panel .schedule-topic {
+      font-family: inherit;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .schedule-panel .schedule-time {
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      color: #64748b;
+      white-space: nowrap;
+    }
+
+    .schedule-panel .schedule-topic {
+      color: #1e293b;
+      text-align: left;
+    }
+
+    .abstract-content {
+      font-size: 1.1rem;
+      line-height: 1.65;
+    }
+
+    .schedule-section {
+      margin-top: 3rem;
+    }
+
+    .abstract-highlight,
+    .abstract-lead {
+      color: #3273dc;
+    }
+
+    .abstract-highlight {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
   </style>
 </head>
 
@@ -92,7 +201,7 @@
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">Future of Work in the Age of LLMs</h1>
           <h1 class="title is-4 publication-title">Tutorial at <a href="https://2026.aclweb.org/program/">ACL 2026</a>
-          <h1 class="title is-4 publication-title">San Diego, California</h1>
+          <h1 class="title is-4 publication-title">San Diego, California 🌴</h1>
 
           <!-- Profile Pictures Section -->
           <div class="presenter-profiles">
@@ -116,39 +225,8 @@
               <a href="https://cs.stanford.edu/~diyiy/"><div class="presenter-name">Diyi Yang</div></a>
               <div class="presenter-affiliation">Stanford University</div>
             </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="TODO"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Slides</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="TODO"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-camera"></i>
-                  </span>
-                  <span>Recordings</span>
-                </a>
-              </span>
-             <span class="link-block">
-                <a href="TODO"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Presenter Biographies</span>
-                </a>
-              </span>
-            </div>
-
           </div>
+
         </div>
       </div>
     </div>
@@ -160,57 +238,149 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+      <div class="column">
+        <div class="content has-text-justified abstract-content">
           <p>
-            The recent development of large language models (LLMs) has revolutionized the landscape of human work. These models possess the ability to follow complex human instructions and operate versatile computer software, enabling them to participate in, augment, or even automate realistic occupational tasks that once thought to be exclusive to humans.
+            <span class="abstract-highlight">Large language models (LLMs) are reshaping how we work.</span>
+            They can now follow complex instructions, use software, and perform tasks once thought exclusive to humans.
+            This is raising urgent questions: about job displacement, human agency, and overreliance on automation.
           </p>
           <p>
-            As LLMs are increasingly integrated into workplaces, they are already reshaping labor dynamics (Hoffmann et al., 2024; Demirci et al., 2025) and raising urgent concerns about job displacement, diminished human agency, and overreliance on automation (Hazra et al., 2025). As a result, the future of work is undergoing a profound transformation: How will human occupations and task requirements evolve over time? And what roles will LLM-based systems play, as they become increasingly capable collaborators and autonomous workers? And how can we build technological and data infrastructures to support human-AI collaboration?
-          </p>
-          <p>
-            This tutorial will provide an overview of the future of work shaped by the interplay of LLMs and humans, examining the emerging challenges, opportunities, and ethical considerations in this dynamic landscape. We begin by examining the economic landscape of work and how NLP technologies drive automation, followed by methods for developing LLMs that augment human labor and recent advances in LLM-based agents. We then cover evaluation approaches for workplace contexts, including datasets, benchmarks, and metrics, and conclude with open questions on technical, human, and societal implications.
-            </p>
+            This tutorial maps the current landscape and looks ahead: How will occupations and task requirements evolve? What roles will LLM-based systems play as capable collaborators and autonomous workers? And how do we build the infrastructure to support effective human-AI collaboration?
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
- <!-- Schedule. -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Schedule</h2>
-        <div class="content has-text-justified">
-          <p><strong>July 2, 2026</strong></p>
-          <p><ul>
-            <li><strong>Time</strong> Topic (Duration)</li>
-          </ul></p>
+    <!-- Schedule. -->
+    <div class="columns is-centered schedule-section mb-6">
+      <div class="column">
+        <h2 class="title is-3">Schedule: July 2, 2026</h2>
+        <div class="content">
+          <div class="columns schedule-panels is-variable is-6">
+            <div class="column is-half-tablet schedule-column">
+              <div class="schedule-panel">
+                <h3 class="schedule-session-title"><span>Session 1</span> Landscape of Human Work</h3>
+                  <table class="schedule-slot-table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">09:00 – 09:10</span>
+                          <span class="schedule-topic">Background and overview</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">09:10 – 09:25</span>
+                          <span class="schedule-topic">The landscape of work</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">09:25 – 09:40</span>
+                          <span class="schedule-topic">How NLP is transforming work</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <div class="schedule-panel">
+                <h3 class="schedule-session-title"><span>Session 2</span> Building LLMs to Augment Work</h3>
+                  <table class="schedule-slot-table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">09:40 – 09:55</span>
+                          <span class="schedule-topic">LLM-based agents</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">09:55 – 10:10</span>
+                          <span class="schedule-topic">Training LLMs for work-related tasks</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">10:10 – 10:20</span>
+                          <span class="schedule-topic">Representative open-source platforms</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+            <div class="column is-half-tablet schedule-column">
+              <div class="schedule-panel">
+                <h3 class="schedule-session-title"><span>Session 3</span> Evaluating LLMs at Work</h3>
+                  <table class="schedule-slot-table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">10:50 – 11:00</span>
+                          <span class="schedule-topic">Desiderata for evaluating LLMs at work</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">11:00 – 11:15</span>
+                          <span class="schedule-topic">Existing datasets and benchmarks</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">11:15 – 11:30</span>
+                          <span class="schedule-topic">Metric design practice</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <div class="schedule-panel">
+                <h3 class="schedule-session-title"><span>Session 4</span> The Future of Work with LLMs</h3>
+                  <table class="schedule-slot-table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">11:30 – 11:45</span>
+                          <span class="schedule-topic">Technical challenges</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">11:45 – 11:55</span>
+                          <span class="schedule-topic">Evolving roles of human workers</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="schedule-time">11:55 – 12:00</span>
+                          <span class="schedule-topic">Social impact, risks, and closing remarks</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Concurrent Work. -->
+    <!-- Resources. -->
     <div class="columns is-centered">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Related Resources</h2>
+      <div class="column">
+        <h2 class="title is-3">Resources</h2>
         <div class="content has-text-justified">
           <p>
-            <strong><a href="https://zorazrw.github.io/ai4work/" target="_blank">AI Agents for Human Work</a></strong><br>
-          </p>
-          <p>
-            <strong><a href="https://futureofwork.saltlab.stanford.edu/" target="_blank">Future of Work with AI Agents</a></strong><br>
+            Coming soon...
           </p>
 
         </div>
       </div>
-      </div>
     </div>
-    <!--/ Concurrent Work. -->
+    <!--/ Resources. -->
 
   </div>
 </section>
@@ -221,10 +391,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>@inproceedings{future-of-work-tutorial,
     title = "Future of Work in the Age of LLMs",
-    author = "Wang, Zora  and
-      Shao, Yijia  and
-      Nguyen, David  and
-      Yang, Diyi",
+    author = "Wang, Zora  and Shao, Yijia  and Nguyen, David  and Yang, Diyi",
     booktitle = "Proceedings of the 65th Annual Meeting of the Association for Computational Linguistics",
     publisher = "Association for Computational Linguistics",
 }</code></pre>
