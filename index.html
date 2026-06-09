@@ -68,6 +68,60 @@
       color: #666;
     }
 
+    .panel-profiles-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin: 1rem 0 0.65rem;
+    }
+
+    .panel-profiles {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .panel-card {
+      text-align: center;
+      flex: 0 1 88px;
+    }
+
+    .panel-image {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.35rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .panel-image:hover {
+      transform: scale(1.05);
+    }
+
+    .panel-image-placeholder {
+      display: inline-block;
+      background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    }
+
+    .panel-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+      color: #03a5fc;
+      line-height: 1.25;
+    }
+
+    .panel-affiliation {
+      font-size: 0.68rem;
+      color: #666;
+      line-height: 1.3;
+    }
+
     .schedule-panels {
       margin-top: 1.25rem;
     }
@@ -370,6 +424,24 @@
                       </tr>
                     </tbody>
                   </table>
+                  <p class="panel-profiles-label">Panelists</p>
+                  <div class="panel-profiles">
+                    <div class="panel-card">
+                      <img src="static/images/david.jpg" alt="David Nguyen" class="panel-image">
+                      <a href="https://digitaleconomy.stanford.edu/person/david-nguyen/"><div class="panel-name">David Nguyen</div></a>
+                      <div class="panel-affiliation">Stanford University</div>
+                    </div>
+                    <div class="panel-card">
+                      <img src="static/images/diyi.jpg" alt="Diyi Yang" class="panel-image">
+                      <a href="https://cs.stanford.edu/~diyiy/"><div class="panel-name">Diyi Yang</div></a>
+                      <div class="panel-affiliation">Stanford University</div>
+                    </div>
+                    <div class="panel-card">
+                      <img src="static/images/erik.jpg" alt="Erik Brynjolfsson" class="panel-image">
+                      <a href="https://www.brynjolfsson.com/"><div class="panel-name">Erik Brynjolfsson</div></a>
+                      <div class="panel-affiliation">Stanford University</div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
